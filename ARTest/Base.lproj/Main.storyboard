@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="E1S-dz-lal">
+            <objects>
+                <viewController id="yJF-rx-pC6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XKh-bQ-EaG"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6o-CU-yPI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KFL-ha-qND">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-SQ-gJ0">
+                                <rect key="frame" x="119" y="141" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7d-fO-sLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1152" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6je-49-pkd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-vN-AeD">
+                                <rect key="frame" x="310" y="36" width="51" height="31"/>
+                                <connections>
+                                    <action selector="swAutoChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="oEb-Dp-htp"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yA-hu-FaX">
+                                <rect key="frame" x="266" y="41" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGn-X5-hhV">
+                                <rect key="frame" x="16" y="29" width="64" height="44"/>
+                                <color key="backgroundColor" white="0.30493861607142858" alpha="0.30193661971830987" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="6pO-fC-I6A"/>
+                                    <constraint firstAttribute="height" constant="44" id="We6-Gv-QdX"/>
+                                </constraints>
+                                <state key="normal" title=" Reset "/>
+                                <connections>
+                                    <action selector="buttonResetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uos-3l-8eE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GGn-X5-hhV" firstAttribute="centerY" secondItem="HLw-vN-AeD" secondAttribute="centerY" id="9uh-5k-PHa"/>
+                            <constraint firstItem="6je-49-pkd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ATX-sh-ccz"/>
+                            <constraint firstItem="HLw-vN-AeD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pyz-YC-Qw4"/>
+                            <constraint firstAttribute="trailing" secondItem="6je-49-pkd" secondAttribute="trailing" id="Wxo-7r-k3d"/>
+                            <constraint firstItem="HLw-vN-AeD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="YO7-3u-HL4"/>
+                            <constraint firstItem="6je-49-pkd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aOb-tx-k1k"/>
+                            <constraint firstItem="HLw-vN-AeD" firstAttribute="leading" secondItem="5yA-hu-FaX" secondAttribute="trailing" constant="8" id="nKE-8b-yIK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6je-49-pkd" secondAttribute="bottom" id="s6g-cY-Mbg"/>
+                            <constraint firstItem="5yA-hu-FaX" firstAttribute="centerY" secondItem="HLw-vN-AeD" secondAttribute="centerY" id="v6P-eq-ZmL"/>
+                            <constraint firstItem="GGn-X5-hhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wyN-4H-vn4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="6je-49-pkd" id="ZIw-UQ-XNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
